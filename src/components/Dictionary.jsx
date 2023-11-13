@@ -1,5 +1,7 @@
 const Dictionary = ({ wordData }) => {
-  const definitionsOfWord = wordData?.meanings[0].definitions.map(
+  if (!wordData) return null;
+
+  const definitionsOfWord = wordData.meanings[0]?.definitions.map(
     (meanings) => {
       return <li key={meanings.index}>{meanings.definition}</li>;
     }
@@ -13,11 +15,9 @@ const Dictionary = ({ wordData }) => {
 
   return (
     <div className="text-start">
-      {wordData && (
-        <p className="fw-bold display-6 fst-italic text-capitalize">
-          <span className="fw-bold">{wordData.word}</span>
-        </p>
-      )}
+      <p className="fw-bold display-6 fst-italic text-capitalize">
+        <span className="fw-bold">{wordData.word}</span>
+      </p>
       <p className="fw-semibold">noun</p>
       <p className="text-muted">Meaning</p>
       <ul className="">{definitionsOfWord}</ul>

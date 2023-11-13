@@ -25,7 +25,7 @@ const App = () => {
       <Row className="justify-content-center">
         <Col md={6}>
           <SearchForm getWordData={getWordData} />
-          <main>{wordData && <Dictionary wordData={wordData} />}</main>
+          <main>{<Dictionary wordData={wordData} />}</main>
         </Col>
       </Row>
     </Container>

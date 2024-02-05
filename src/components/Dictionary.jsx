@@ -1,8 +1,11 @@
+import Loading from "./Loading";
 import NounDefinitions from "./NounDefinitions";
 import VerbDefinitions from "./VerbDefinitions";
 
 const Dictionary = ({ wordData, loading, error }) => {
   if (!wordData) return null;
+
+  if (loading) return <Loading />;
 
   const definitionsOfWord = wordData.meanings[0]?.definitions.map(
     (meanings) => {

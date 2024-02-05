@@ -1,4 +1,15 @@
+:root {
+  --dark-color: #202b38;
+  --white-color: #fff;
+}
+
 body {
   font-family: serif;
-  /* background-color: #eaeaea; */
+  background-color: var(--dark-color);
+  color: var(--white-color);
+}
+
+.loading {
+  text-align: center;
+  font-size: 1.5rem;
 }

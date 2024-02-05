@@ -1,4 +1,5 @@
 import NounDefinitions from "./NounDefinitions";
+import VerbDefinitions from "./VerbDefinitions";
 
 const Dictionary = ({ wordData, loading, error }) => {
   if (!wordData) return null;
@@ -22,9 +23,7 @@ const Dictionary = ({ wordData, loading, error }) => {
       </p>
       <NounDefinitions definitionsOfWord={definitionsOfWord} />
       <hr />
-      <p className="fw-semibold">verb</p>
-      <p className="text-muted">Meaning</p>
-      <ul className="">{definitionsOfVerb}</ul>
+      <VerbDefinitions definitionsOfVerb={definitionsOfVerb} />
     </div>
   );
 };

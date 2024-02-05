@@ -1,3 +1,5 @@
+import NounDefinitions from "./NounDefinitions";
+
 const Dictionary = ({ wordData, loading, error }) => {
   if (!wordData) return null;
 
@@ -18,9 +20,7 @@ const Dictionary = ({ wordData, loading, error }) => {
       <p className="fw-bold display-6 fst-italic text-capitalize">
         <span className="fw-bold">{wordData.word}</span>
       </p>
-      <p className="fw-semibold">noun</p>
-      <p className="text-muted">Meaning</p>
-      <ul className="">{definitionsOfWord}</ul>
+      <NounDefinitions definitionsOfWord={definitionsOfWord} />
       <hr />
       <p className="fw-semibold">verb</p>
       <p className="text-muted">Meaning</p>

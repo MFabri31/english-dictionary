@@ -28,7 +28,7 @@ const SearchForm = ({ getWordData }) => {
         />
         <Button
           type="submit"
-          variant="outline-primary"
+          variant="primary"
           className="rounded ms-2 fw-semibold"
         >
           <i className="bi bi-search me-1"></i>

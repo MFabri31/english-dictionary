@@ -1,4 +1,4 @@
-const Dictionary = ({ wordData }) => {
+const Dictionary = ({ wordData, loading, error }) => {
   if (!wordData) return null;
 
   const definitionsOfWord = wordData.meanings[0]?.definitions.map(

@@ -21,3 +21,11 @@ body {
   border-bottom-left-radius: 50% 20%;
   border-bottom-right-radius: 50% 20%;
 }
+
+.header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
+    url("./assets/images/header-img.jpg");
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

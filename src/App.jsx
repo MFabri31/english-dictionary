@@ -8,18 +8,26 @@ const App = () => {
   const { wordData, loading, error, getWordData } = useDictionary();
 
   return (
-    <Container>
+    <>
       <Header />
-      <Row className="justify-content-center">
-        <Col md={6}>
-          <SearchForm getWordData={getWordData} />
+      <Container>
+        <Row className="justify-content-center">
+          <Col md={6}>
+            <SearchForm getWordData={getWordData} />
 
-          <main>
-            {<Dictionary wordData={wordData} loading={loading} error={error} />}
-          </main>
-        </Col>
-      </Row>
-    </Container>
+            <main>
+              {
+                <Dictionary
+                  wordData={wordData}
+                  loading={loading}
+                  error={error}
+                />
+              }
+            </main>
+          </Col>
+        </Row>
+      </Container>
+    </>
   );
 };
 

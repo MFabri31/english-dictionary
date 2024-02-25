@@ -24,12 +24,12 @@ const SearchForm = ({ getWordData }) => {
           placeholder="Search any word"
           required
           autoFocus
-          className="form-control py-2 rounded bg-secondary-subtle fw-bold text-dark-emphasis"
+          className="form-control p-3 rounded-pill bg-secondary-subtle fw-bold text-dark-emphasis"
         />
         <Button
           type="submit"
           variant="primary"
-          className="rounded ms-2 fw-semibold"
+          className="rounded-pill ms-2 fw-semibold px-4"
         >
           <i className="bi bi-search me-1"></i>
           Search

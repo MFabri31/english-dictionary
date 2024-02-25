@@ -5,7 +5,7 @@ const endpoint = "https://api.dictionaryapi.dev/api/v2/entries/en";
 const useDictionary = () => {
   const [wordData, setWordData] = useState(null);
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(null);
+  const [error, setError] = useState(false);
 
   const getWordData = async ({ search }) => {
     try {
@@ -16,12 +16,13 @@ const useDictionary = () => {
       if (!response.ok) throw { title: data.title };
 
       setWordData(data[0]);
+      setError(false);
     } catch (error) {
       setError(error.title);
+      setWordData(null);
       console.error("Error fetching word data:", error);
     } finally {
       setLoading(false);
-      // setError(null);
     }
   };
 

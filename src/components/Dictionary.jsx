@@ -1,13 +1,23 @@
+import { Alert } from "react-bootstrap";
 import Loading from "./Loading";
 import NounDefinitions from "./NounDefinitions";
 import VerbDefinitions from "./VerbDefinitions";
 
 const Dictionary = ({ wordData, loading, error }) => {
-  if (!wordData) return null;
-
   if (loading) return <Loading />;
 
-  const definitionsOfWord = wordData.meanings[0]?.definitions.map(
+  if (error) {
+    return (
+      <Alert className="mt-3 fs-5 fw-bold inline-block" variant="warning">
+        <i class="bi bi-exclamation-triangle-fill mx-3"></i>
+        {error} for that word!
+      </Alert>
+    );
+  }
+
+  if (!wordData) return;
+
+  const definitionsOfWord = wordData?.meanings[0]?.definitions.map(
     (meanings) => {
       return (
         <li className="h5" key={meanings.index}>

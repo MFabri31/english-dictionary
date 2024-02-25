@@ -9,20 +9,14 @@ const App = () => {
 
   return (
     <>
-      <Header />
+      <Header>
+        <SearchForm getWordData={getWordData} />
+      </Header>
       <Container>
         <Row className="justify-content-center">
           <Col md={6}>
-            <SearchForm getWordData={getWordData} />
-
             <main>
-              {
-                <Dictionary
-                  wordData={wordData}
-                  loading={loading}
-                  error={error}
-                />
-              }
+              <Dictionary wordData={wordData} loading={loading} error={error} />
             </main>
           </Col>
         </Row>

@@ -1,12 +1,12 @@
 :root {
   --dark-color: #202b38;
-  --white-color: #fff;
+  --white-color: #eaeaea;
 }
 
 body {
   font-family: serif;
-  background-color: var(--dark-color);
-  color: var(--white-color);
+  background-color: var(--white-color);
+  color: var(--dark-color);
 }
 
 .loading {

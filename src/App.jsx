@@ -13,7 +13,7 @@ const App = () => {
         <SearchForm getWordData={getWordData} />
       </Header>
       <Container>
-        <Row className="justify-content-center">
+        <Row className="justify-content-center py-5">
           <Col md={6}>
             <main>
               <Dictionary wordData={wordData} loading={loading} error={error} />

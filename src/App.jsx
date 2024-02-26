@@ -3,6 +3,7 @@ import SearchForm from "./components/SearchForm";
 import { Col, Container, Row } from "react-bootstrap";
 import Dictionary from "./components/Dictionary";
 import useDictionary from "./hooks/useDictionary";
+import { Footer } from "./components/Footer";
 
 const App = () => {
   const { wordData, loading, error, getWordData } = useDictionary();
@@ -20,6 +21,7 @@ const App = () => {
             </main>
           </Col>
         </Row>
+        <Footer />
       </Container>
     </>
   );

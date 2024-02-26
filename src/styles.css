@@ -4,9 +4,12 @@
 }
 
 body {
+  position: relative;
+  min-height: 100vh;
   font-family: serif;
   background-color: var(--white-color);
   color: var(--dark-color);
+  overflow-x: hidden;
 }
 
 .loading {
@@ -28,4 +31,14 @@ body {
   background-position: bottom center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.footer {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .footer {
+    width: 75%;
+  }
 }

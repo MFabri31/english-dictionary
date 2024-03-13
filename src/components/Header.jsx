@@ -6,7 +6,7 @@ const Header = ({ children }) => {
       <Container>
         <Row className="justify-content-center">
           <Col md="6">
-            <h1 className="display-1 m-0 text-white lead text-center mb-5">
+            <h1 className="m-0 text-white text-center mb-5 title">
               English Dictionary
             </h1>
             {children}

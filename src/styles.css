@@ -1,5 +1,5 @@
 :root {
-  --dark-color: #202b38;
+  --dark-color: #12161e;
   --white-color: #eaeaea;
 }
 
@@ -7,8 +7,8 @@ body {
   position: relative;
   min-height: 100vh;
   font-family: serif;
-  background-color: var(--white-color);
-  color: var(--dark-color);
+  background-color: var(--dark-color);
+  color: var(--white-color);
   overflow-x: hidden;
 }
 

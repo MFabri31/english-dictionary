@@ -29,7 +29,7 @@ const SearchForm = ({ getWordData }) => {
         <Button
           type="submit"
           variant="primary"
-          className="rounded-pill ms-2 fw-semibold px-4"
+          className="rounded-pill ms-2 fw-semibold btn px-4"
         >
           <i className="bi bi-search me-1"></i>
           Search
